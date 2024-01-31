@@ -9,6 +9,6 @@
 
 rootProject.name = 'lu-playground'
 include('app')
-// include('tier1')
+include('tier-one')
 // include('tier2')
 // include('tier3')
