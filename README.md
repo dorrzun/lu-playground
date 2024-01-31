@@ -12,24 +12,24 @@ Additionally, my work is a constant work in progress! Feel free to suggestion re
 To complete each module, watch the included Youtube video (coming soon...) 
 
 **Tier I: Playing in the Vault**
-    - What is Domain Driven Design (DDD)
-    - Dependency Injection/Inversion of Control (IOC)
-    - Encapsulation, Separation of Concern and Design By Contract
-    - JavaDoc: How to use it and why it's important
-    - Unit Testing with JUnit 5
+- What is Domain Driven Design (DDD)
+- Dependency Injection/Inversion of Control (IOC)
+- Encapsulation, Separation of Concern and Design By Contract
+- JavaDoc: How to use it and why it's important
+- Unit Testing with JUnit 5
 
 **Tier II: Making Bank (Accounts)**
-    - What is Failing Fast?
-    - What is a Offensive/Defensive Programming?
-    - Polymorphism
-    - Encapsulation
-    - Separation of Concern
-    - Validation Libraries & Annotations
+- What is Failing Fast?
+- What is a Offensive/Defensive Programming?
+- Polymorphism
+- Encapsulation
+- Separation of Concern
+- Validation Libraries & Annotations
 
 **Tier III: Bringing Home The Bankon**
-  -Demonstrate the following:
-    -Service Oriented Design
-    -Complete a business process/workflow from start to finish
+- Service Oriented Design
+- Complete a business process/workflow from start to finish
+- TBD
 
 ### Dependencies
 * This repository uses Gradle to manage its dependencies
