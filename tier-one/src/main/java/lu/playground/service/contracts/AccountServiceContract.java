@@ -3,7 +3,6 @@ package lu.playground.service.contracts;
 import java.util.Optional;
 
 import lu.playground.entity.Account;
-import lu.playground.exception.DatabaseException;
 
 /**
  * Represents the working data contract offered to any consumers of the account
@@ -23,7 +22,7 @@ public interface AccountServiceContract {
      * @param firstName The first name of the account owner
      * @param lastName  The last name of the account owner
      * @return A six character string representing the account ID
-     * @throw DatabaseException If the account database was unavailable
+     * @throw {@link DatabaseException} If the account database was unavailable
      */
     public String createAccount(String firstName, String lastName);
 
@@ -34,7 +33,7 @@ public interface AccountServiceContract {
      *           "read" often appears as "get" or "fetch"
      * @param accountId A 6 character string containing only non-whitespace chars
      * @return The account having the given ID
-     * @throw DatabaseException If the account database was unavailable
+     * @throw {@link DatabaseException} If the account database was unavailable
      */
     public Optional<Account> getAccount(String accountId);
 
@@ -46,7 +45,7 @@ public interface AccountServiceContract {
      * @implNote This action will succeed even if the account has no prior entry in
      *           the database
      * @param updatedAccount An account object to write to the database
-     * @throw DatabaseException If the account database was unavailable
+     * @throw {@link DatabaseException} If the account database was unavailable
      */
     public void updateAccount(Account updatedAccount);
 
@@ -54,7 +53,7 @@ public interface AccountServiceContract {
      * Deletes the account with the given ID from the database
      * 
      * @param accountId
-     * @throw DatabaseException If the account database was unavailable
+     * @throw {@link DatabaseException} If the account database was unavailable
      */
     public void deleteAccount(String accountId);
 }

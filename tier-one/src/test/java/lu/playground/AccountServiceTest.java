@@ -3,29 +3,15 @@
  */
 package lu.playground;
 
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Disabled;
-import org.junit.jupiter.api.RepeatedTest;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
-import lombok.extern.slf4j.Slf4j;
 import lu.playground.entity.Account;
 import lu.playground.service.AccountService;
 import lu.playground.service.contracts.AccountServiceContract;
 
-import org.apache.commons.collections4.SetUtils;
 import org.apache.commons.lang3.StringUtils;
-
-import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
-import java.util.Set;
 
 /**
  * Verifies that the Account Service satisfies its service contract
@@ -36,7 +22,6 @@ class AccountServiceTest {
     /**
      * Verifies that all 4 CRUD operations behave as expected for the Account Service 
      */
-    @Disabled
     @ParameterizedTest
     @ValueSource(strings = {"John Smith", "Jane Doe", "Chuck Norris"})
     void testAllFourCrudOperations(String name) {

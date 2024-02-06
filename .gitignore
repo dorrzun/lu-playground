@@ -14,7 +14,7 @@
 .gradle/
 .vscode/
 .idea/
-app/build
+**/build/
 
 # Package Files #
 *.jar
