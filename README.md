@@ -1,19 +1,18 @@
 # LU Playground
-A multi-module Java "playground" for Longwood student interns/alumni to demonstrate understanding of key software design principles, while learning some industry techniques and tools!
+A multi-module Java "playground" for Longwood student interns/alumni to demonstrate understanding of key software design principles, while learning some industry techniques and tools!  
 
 ## Description
-This project is divided into multiple modules with various degrees of "scaffolding" for you to complete or design from scratch.
-Ideally, you will complete this project feeling much more equipped to work with Java in the industry, or even create projects on your own!
+**<ins>This project is divided into multiple modules with various degrees of "scaffolding" for you to complete or design from scratch.</ins>**  
 
-Modules I to III will present both new/known material and concepts, some pertaining to Java itself or software development as a whole.
-Modules IV and V are entirely optional, but provide a simple demonstration of the power that industry standard frameworks offer developers of any level
-Modules V and VI will likely only be appreciated by graduates or people with prior significant exposure to Java 
+Ideally, you will complete this project feeling much more equipped to work with Java in the industry, or even create projects on your own!  
 
-These assignments are not intended to be gospel or cover all scenarios, but they will hopefully help you understand what makes most code
-readable and maintainable for years to come.
-Additionally, my work is a constant work in progress! Feel free to suggestion revisions/changes to the curriculum!
+These assignments are not intended to be gospel or cover all possible bases, but they will hopefully help you understand what can make code readable and maintainable for years to come.  
 
-To complete each module, watch the included Youtube video (coming soon...) 
+**<ins>Modules I to III:</ins>** Covers both old/new material, some pertaining to Java itself or software development as a whole  
+**<ins>Module IV:</ins>** Demonstrates the high quality "off the shelf" functionality that modern frameworks can offer  
+**<ins>Module V:</ins>** Best suited for graduates and/or people with prior significant exposure to Java  
+
+**Youtube tutorials to be included for each Tier (WIP)**  
 
 **Tier I: Playing in the Vault**
 - What is Domain Driven Design (DDD)
@@ -41,11 +40,6 @@ To complete each module, watch the included Youtube video (coming soon...)
 - Swagger
 
 **(BONUS) Tier V: Java, the Double Shot**
-- 
-
-- TBD
-
-**(BONUS) Tier VI:**
 - Lazy Evaluation
 - Optionals
 - Streams 
