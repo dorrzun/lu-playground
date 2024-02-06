@@ -12,7 +12,9 @@
 
 # IDE & Build System Files
 .gradle/
-app/build
+.vscode/
+.idea/
+**/build/
 
 # Package Files #
 *.jar

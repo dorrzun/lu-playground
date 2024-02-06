@@ -8,7 +8,6 @@
  */
 
 rootProject.name = 'lu-playground'
-include('app')
 include('tier-one')
-// include('tier2')
-// include('tier3')
+include('tier-two')
+include('tier-three')

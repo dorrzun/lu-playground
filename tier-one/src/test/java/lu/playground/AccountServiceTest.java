@@ -18,9 +18,8 @@ class AccountServiceTest {
     private AccountServiceContract accountService = new AccountService();
 
     /**
-     * Verifies that all 4 CRUD operations behave as expected for the Account Service 
+     * Verifies that all 4 CRUD operations behave as expected for the Account Service
      */
-   //@Disabled
     @ParameterizedTest
     @ValueSource(strings = {"John Smith", "Jane Doe", "Chuck Norris"})
     void testAllFourCrudOperations(String name) {
