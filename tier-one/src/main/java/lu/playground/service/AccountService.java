@@ -4,9 +4,11 @@ import java.util.Optional;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Null;
 
 import lombok.extern.slf4j.Slf4j;
 import lu.playground.entity.Account;
+import lu.playground.exception.DatabaseException;
 import lu.playground.service.contracts.AccountServiceContract;
 
 import java.util.HashMap;
@@ -28,57 +30,78 @@ public class AccountService implements AccountServiceContract {
     }
 
     @Override
-    public String createAccount(@NotBlank String firstName, @NotBlank String lastName) {
+    public String createAccount(@NotBlank String firstName, @NotBlank String lastName) throws DatabaseException {
         // TODO Auto-generated method stub
 
-        try{
-            // attempt to find if account exists
-                // if it doesn't, create it
-                // if it does, return its account id
-        }
+        try {
+            String key = generateKey( firstName, lastName);
+            if( accountDatabase.containsKey(key) ){
+                return key;
+            }
 
-        catch ( Exception e ) {
-            //print error message
+            else {
+                Account newAccount = new Account(firstName, lastName);
+                accountDatabase.put(key, newAccount);
+                return key;
+            }
+        } catch (Exception e) {
+            throw new DatabaseException("Failed to create account", e);
         }
         //throw new UnsupportedOperationException("Unimplemented method 'createAccount'");
     }
 
     @Override
-    public Optional<Account> getAccount(@NotBlank String accountId) {
+    public Optional<Account> getAccount(@NotBlank String accountId) throws DatabaseException {
         // TODO Auto-generated method stub
+
         try{
             // attempt to lookup account and return it
+            Account account = accountDatabase.get( accountId );
+            return Optional.ofNullable( account );
         }
 
         catch ( Exception e ){
-            //print error message
+            throw new DatabaseException("Failed to get account", e);
         }
         //throw new UnsupportedOperationException("Unimplemented method 'getAccount'");
     }
 
     @Override
-    public void updateAccount(@NotNull Account updatedAccount) {
+    public void updateAccount(@NotNull Account updatedAccount) throws DatabaseException {
         // TODO Auto-generated method stub
         try {
-            // update account?
+            accountDatabase.put( updatedAccount.getFirstName() + updatedAccount.getLastName(), updatedAccount );
         }
 
         catch( Exception e ){
-            //print error message
+            throw new DatabaseException("Failed to update account", e);
         }
         //throw new UnsupportedOperationException("Unimplemented method 'updateAccount'");
     }
 
     @Override
-    public void deleteAccount(@NotBlank String accountId) {
+    public void deleteAccount(@NotBlank String accountId) throws DatabaseException {
         // TODO Auto-generated method stub
         try {
-            // attempt to remove account from database
+            accountDatabase.remove( accountId );
         }
 
         catch( Exception e ){
-            //print error message
+            throw new DatabaseException("Failed to delete account", e);
         }
         //throw new UnsupportedOperationException("Unimplemented method 'deleteAccount'");
+    }
+
+    public String generateKey( @NotBlank String firstName, @NotBlank String lastName ) {
+        String firsthalf = firstName.substring(0, Math.min(firstName.length(), 3)).toUpperCase();
+        String lasthalf = lastName.substring(0, Math.min(lastName.length(), 3)).toUpperCase();
+
+        String rv = lasthalf + firsthalf;
+
+        while (rv.length() < 6) {
+            rv += "0";
+        }
+
+        return rv;
     }
 }
