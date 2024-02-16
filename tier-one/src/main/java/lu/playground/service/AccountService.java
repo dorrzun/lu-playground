@@ -61,10 +61,8 @@ public class AccountService implements AccountServiceContract {
 
     @Override
     public void updateAccount(@NotNull Account updatedAccount) {
-        //String accountID;
         try {
-            //accountDatabase.put(updatedAccount.accountID, updatedAccount);
-            //log.info("Account updated successfully. Account ID: {}", updatedAccount.accountId);
+            accountDatabase.put(updatedAccount.getFirstName() + updatedAccount.getLastName(), updatedAccount);
         } catch (Exception e) {
             log.error("Error updating account", e);
             throw new DatabaseException("Error updating account", e);
