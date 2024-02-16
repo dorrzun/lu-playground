@@ -3,13 +3,14 @@
  */
 package lu.playground;
 
-import org.apache.commons.lang3.StringUtils;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import lu.playground.entity.Account;
 import lu.playground.service.AccountService;
 import lu.playground.service.contracts.AccountServiceContract;
+
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * Verifies that the Account Service satisfies its service contract
@@ -18,7 +19,7 @@ class AccountServiceTest {
     private AccountServiceContract accountService = new AccountService();
 
     /**
-     * Verifies that all 4 CRUD operations behave as expected for the Account Service
+     * Verifies that all 4 CRUD operations behave as expected for the Account Service 
      */
     @ParameterizedTest
     @ValueSource(strings = {"John Smith", "Jane Doe", "Chuck Norris"})
