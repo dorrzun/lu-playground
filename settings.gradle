@@ -8,6 +8,4 @@
  */
 
 rootProject.name = 'lu-playground'
-include('tier-one')
-include('tier-two')
-include('tier-three')
+include('tier-one','tier-two')

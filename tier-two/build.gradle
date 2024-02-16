@@ -17,6 +17,9 @@ repositories {
 }
 
 dependencies {
+    //Require Tier 1 Module
+    implementation project(':tier-one')
+
     //Lombok (w/o Gradle plugin)
     compileOnly 'org.projectlombok:lombok:1.18.30'
 	annotationProcessor 'org.projectlombok:lombok:1.18.30'

@@ -1,39 +1,54 @@
 # LU Playground
-A Java project to demonstrate design concepts that budding Java developers can apply in industry and just become more familiar with writing programs that can grow to more than a few files!
+A multi-module Java "playground" for Longwood student interns/alumni to demonstrate understanding of key software design principles, while learning some industry techniques and tools!  
 
 ## Description
-This project does not utilize any common framework and behaves much like any "intro" Java program would.
-There are three modules to complete, and each one involves both familiar and unfamiliar concepts, some pertaining to Java itself or software development as a whole.
+**<ins>This project is divided into multiple modules with various degrees of "scaffolding" for you to complete or design from scratch.</ins>**  
 
-These assignments are not intended to be gospel or cover all scenarios, but they will hopefully help you understand what makes most code
-readable and maintainable for years to come.
-Additionally, my work is a constant work in progress! Feel free to suggestion revisions/changes to the curriculum!
+Ideally, you will complete this project feeling much more equipped to work with Java in the industry, or even create projects on your own!  
 
-To complete each module, watch the included Youtube video (coming soon...) 
+These assignments are not intended to be gospel or cover all possible bases, but they will hopefully help you understand what can make code readable and maintainable for years to come.  
+
+**<ins>Modules I to III:</ins>** Covers both old/new material, some pertaining to Java itself or software development as a whole  
+**<ins>Module IV:</ins>** Demonstrates the high quality "off the shelf" functionality that modern frameworks can offer  
+**<ins>Module V:</ins>** Best suited for graduates and/or people with prior significant exposure to Java  
+
+**Youtube tutorials to be included for each Tier (WIP)**  
 
 **Tier I: Playing in the Vault**
 - What is Domain Driven Design (DDD)
 - Dependency Injection/Inversion of Control (IOC)
 - Encapsulation, Separation of Concern and Design By Contract
 - JavaDoc: How to use it and why it's important
-- Unit Testing with JUnit 5
 
 **Tier II: Making Bank (Accounts)**
-- What is Failing Fast?
-- What is a Offensive/Defensive Programming?
+- What is Failing Fast and Offensive/Defensive Programming?
+- What are Annotations?
+- Lombok: Boilerplate Be Gone!
 - Polymorphism
-- Encapsulation
-- Separation of Concern
-- Validation Libraries & Annotations
+- Validation Libraries
+- Unit Testing with JUnit 5
 
 **Tier III: Bringing Home The Bankon**
-- Service Oriented Design
+- Working with JSON
+- Service Oriented Architecture
 - Complete a business process/workflow from start to finish
 - TBD
 
+**(BONUS) Tier IV: Banking With (Spring) Boot**
+- Light intro to the Spring Boot Framework
+- RESTful APIs & Best Practices
+- Swagger
+
+**(BONUS) Tier V: Java, the Double Shot**
+- Lazy Evaluation
+- Optionals
+- Streams 
+- Lambda Functions and "Functional" Iteration
+- Switch Expressions (Switch Case's Cooler Twin)
+
 ### Dependencies
 * This repository uses Gradle to manage its dependencies
-* Ensure you have Java installed on your machine and your $JAVA_HOME environment variable is set appropriately
+* Ensure you have the Java Development Kit (JDK) installed on your machine and that the $JAVA_HOME env. variable is set appropriately
 
 ## Getting Started
 * Install [VSCode](https://code.visualstudio.com/Download)
@@ -53,3 +68,6 @@ To complete each module, watch the included Youtube video (coming soon...)
 
 ### Additional Info
 Bear with me, as you might encounter an error or two during setup, depending on how accurate my crash course instructions are :)
+
+### Contact Info
+Austin Youngerman austin.youngerman@live.longwood.edu
